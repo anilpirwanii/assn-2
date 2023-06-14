@@ -35,11 +35,11 @@ public class UsersController {
     public String addUser(@RequestParam Map<String, String> newuser, HttpServletResponse response) {
         System.out.println("Add user");
         String newName = newuser.get("name");
-        double newWeight = Integer.parseInt(newuser.get("weight"));
-        double newHeight = Integer.parseInt(newuser.get("height"));
+        Integer newWeight = Integer.parseInt(newuser.get("weight"));
+        Integer newHeight = Integer.parseInt(newuser.get("height"));
         String newHairColor = newuser.get("haircolor");
-        double newGPA = Integer.parseInt(newuser.get("gpa"));
-        userRepo.save(new User(newName, newWeight, newHeight, newHairColor, newGPA));
+        Double newGpa= Double.parseDouble(newuser.get("gpa"));
+        userRepo.save(new User(newName, newWeight, newHeight, newHairColor, newGpa));
         response.setStatus(201);
         return "users/addedUser";
     }
