@@ -11,17 +11,17 @@ public class User {
     private String name;
     private Integer weight;
     private Integer height;
-    private String hairColor;
+    private String color;
     private Double gpa;
 
     public User() {
     }
 
-    public User(String name, Integer weight, Integer height, String hairColor, Double gpa) {
+    public User(String name, Integer weight, Integer height, String color, Double gpa) {
         this.name = name;
         this.weight = weight;
         this.height = height;
-        this.hairColor = hairColor;
+        this.color = color;
         this.gpa = gpa;
     }
 
@@ -49,12 +49,12 @@ public class User {
         this.height = height;
     }
 
-    public String getHairColor() {
-        return hairColor;
+    public String getColor() {
+        return color;
     }
 
-    public void setHairColor(String hairColor) {
-        this.hairColor = hairColor;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public Double getGpa() {
